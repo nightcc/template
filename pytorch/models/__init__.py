@@ -1,8 +1,8 @@
 import torch
 import torchvision.models as torch_models
 import logging
-import cifar10_models
-import imagenet_models
+from . import cifar10_models
+from . import imagenet_models
 
 msglogger = logging.getLogger()
 

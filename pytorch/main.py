@@ -155,7 +155,7 @@ def train(train_loader, model, criterion, optimizer, epoch, loggers, args):
             stats_dict['LR'] = optimizer.param_groups[0]['lr']
             stats_dict['Time'] = batch_time.mean
             stats = ('Performance/Training/', stats_dict)
-            msglogger.info('Train epoch: %d [%+5d/%+5d]  Top1: %.3f  Top5: %.3f  Loss: %.3f',
+            msglogger.info('Train epoch: %d [%5d/%5d]  Top1: %.3f  Top5: %.3f  Loss: %.3f',
                        epoch, steps_completed, steps_per_epoch,  errs['Top1'], errs['Top5'], losses['Objective Loss'].mean)
 
         end = time.time()
