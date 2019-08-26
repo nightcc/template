@@ -36,7 +36,7 @@ def create_model(pretrained, dataset, arch, parallel= True, device_ids=None):
         msglogger.info("=> creating {} model for CIFAR10".format(arch))
 
     else:
-        raise ValueError("Could not recognize dataset }".format(dataset))
+        raise ValueError("Could not recognize dataset {}".format(dataset))
 
     if torch.cuda.is_available() and device_ids != -1:
         device = 'cuda'
