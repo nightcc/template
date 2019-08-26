@@ -24,7 +24,7 @@ def create_model(pretrained, dataset, arch, parallel= True, device_ids=None):
             model = imagenet_models.__dict__[arch]()
         else:
             raise ValueError("Model {} is not supported for dataset ImageNet".format(arch))
-        msglogger.info("=> using {p}{a} model for imagenet".format(a=arch, p=('pretrained' if pretrained else ''))) 
+        msglogger.info("=> using {p} {a} model for imagenet".format(a=arch, p=('pretrained' if pretrained else ''))) 
 
     elif dataset == 'cifar10':
         if pretrained:
